@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "DisplayManager.h"
+
 @interface AppDelegate ()
 
 @property (nonatomic, strong) NSStatusItem *appStatusItem;
@@ -31,9 +33,24 @@
 
     barButton.image = [NSImage imageNamed:@"barButtonIcon"];
 
+    DisplayManager *displayManager = [[DisplayManager alloc] init];
+
     self.barMenu = [[NSMenu alloc] init];
 
     [self.barMenu addItem:[[NSMenuItem alloc] initWithTitle:@"Enable Auto" action:@selector(toggleAutoMode) keyEquivalent:@""]];
+    [self.barMenu addItem:NSMenuItem.separatorItem];
+    NSArray<HardwareDisplay *> *displays = [displayManager getDisplays];
+    if (displays.count == 0) {
+        NSMenuItem *noDisplaysItem = [[NSMenuItem alloc] initWithTitle:@"No external displays" action:nil keyEquivalent:@""];
+        noDisplaysItem.enabled = NO;
+        [self.barMenu addItem:noDisplaysItem];
+    } else {
+        for (HardwareDisplay *hwDisplay in displays) {
+            NSMenuItem *displayMenuItem = [[NSMenuItem alloc] initWithTitle:hwDisplay.name action:nil keyEquivalent:@""];
+            [self.barMenu addItem:displayMenuItem];
+        }
+
+    }
     [self.barMenu addItem:NSMenuItem.separatorItem];
     [self.barMenu addItem:[[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(quit) keyEquivalent:@"q"]];
 

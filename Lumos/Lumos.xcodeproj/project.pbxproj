@@ -11,6 +11,9 @@
 		E601D7902078A4EF0061C257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E601D78F2078A4EF0061C257 /* Assets.xcassets */; };
 		E601D7932078A4EF0061C257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E601D7912078A4EF0061C257 /* Main.storyboard */; };
 		E601D7962078A4EF0061C257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E601D7952078A4EF0061C257 /* main.m */; };
+		E670EC202078C457007DAA0F /* DDC.c in Sources */ = {isa = PBXBuildFile; fileRef = E670EC1F2078C457007DAA0F /* DDC.c */; };
+		E670EC242078C5A1007DAA0F /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E670EC232078C5A1007DAA0F /* DisplayManager.m */; };
+		E670EC282078C744007DAA0F /* HardwareDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E670EC272078C744007DAA0F /* HardwareDisplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,12 @@
 		E601D7942078A4EF0061C257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E601D7952078A4EF0061C257 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E601D7972078A4EF0061C257 /* Lumos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lumos.entitlements; sourceTree = "<group>"; };
+		E670EC1E2078C44F007DAA0F /* DDC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DDC.h; path = ../../DDC.h; sourceTree = "<group>"; };
+		E670EC1F2078C457007DAA0F /* DDC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DDC.c; path = ../../DDC.c; sourceTree = "<group>"; };
+		E670EC222078C5A1007DAA0F /* DisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
+		E670EC232078C5A1007DAA0F /* DisplayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayManager.m; sourceTree = "<group>"; };
+		E670EC262078C744007DAA0F /* HardwareDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HardwareDisplay.h; sourceTree = "<group>"; };
+		E670EC272078C744007DAA0F /* HardwareDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HardwareDisplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,8 @@
 			children = (
 				E601D7892078A4EF0061C257 /* AppDelegate.h */,
 				E601D78A2078A4EF0061C257 /* AppDelegate.m */,
+				E670EC252078C5AF007DAA0F /* Services */,
+				E670EC1D2078C43E007DAA0F /* DDC */,
 				E601D78F2078A4EF0061C257 /* Assets.xcassets */,
 				E601D7912078A4EF0061C257 /* Main.storyboard */,
 				E601D7942078A4EF0061C257 /* Info.plist */,
@@ -63,6 +74,26 @@
 				E601D7972078A4EF0061C257 /* Lumos.entitlements */,
 			);
 			path = Lumos;
+			sourceTree = "<group>";
+		};
+		E670EC1D2078C43E007DAA0F /* DDC */ = {
+			isa = PBXGroup;
+			children = (
+				E670EC1E2078C44F007DAA0F /* DDC.h */,
+				E670EC1F2078C457007DAA0F /* DDC.c */,
+			);
+			name = DDC;
+			sourceTree = "<group>";
+		};
+		E670EC252078C5AF007DAA0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E670EC222078C5A1007DAA0F /* DisplayManager.h */,
+				E670EC232078C5A1007DAA0F /* DisplayManager.m */,
+				E670EC262078C744007DAA0F /* HardwareDisplay.h */,
+				E670EC272078C744007DAA0F /* HardwareDisplay.m */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E670EC202078C457007DAA0F /* DDC.c in Sources */,
+				E670EC282078C744007DAA0F /* HardwareDisplay.m in Sources */,
 				E601D7962078A4EF0061C257 /* main.m in Sources */,
 				E601D78B2078A4EF0061C257 /* AppDelegate.m in Sources */,
+				E670EC242078C5A1007DAA0F /* DisplayManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

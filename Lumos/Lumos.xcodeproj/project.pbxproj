@@ -11,6 +11,8 @@
 		E601D7902078A4EF0061C257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E601D78F2078A4EF0061C257 /* Assets.xcassets */; };
 		E601D7932078A4EF0061C257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E601D7912078A4EF0061C257 /* Main.storyboard */; };
 		E601D7962078A4EF0061C257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E601D7952078A4EF0061C257 /* main.m */; };
+		E635F990207B71DF00E9BCB3 /* ShortcutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E635F98F207B71DF00E9BCB3 /* ShortcutManager.m */; };
+		E635F994207B732C00E9BCB3 /* GlobalShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = E635F993207B732C00E9BCB3 /* GlobalShortcut.m */; };
 		E670EC202078C457007DAA0F /* DDC.c in Sources */ = {isa = PBXBuildFile; fileRef = E670EC1F2078C457007DAA0F /* DDC.c */; };
 		E670EC242078C5A1007DAA0F /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E670EC232078C5A1007DAA0F /* DisplayManager.m */; };
 		E670EC282078C744007DAA0F /* HardwareDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E670EC272078C744007DAA0F /* HardwareDisplay.m */; };
@@ -25,12 +27,17 @@
 		E601D7942078A4EF0061C257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E601D7952078A4EF0061C257 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E601D7972078A4EF0061C257 /* Lumos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lumos.entitlements; sourceTree = "<group>"; };
+		E635F98E207B71DF00E9BCB3 /* ShortcutManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShortcutManager.h; sourceTree = "<group>"; };
+		E635F98F207B71DF00E9BCB3 /* ShortcutManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShortcutManager.m; sourceTree = "<group>"; };
+		E635F992207B732C00E9BCB3 /* GlobalShortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalShortcut.h; sourceTree = "<group>"; };
+		E635F993207B732C00E9BCB3 /* GlobalShortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalShortcut.m; sourceTree = "<group>"; };
 		E670EC1E2078C44F007DAA0F /* DDC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DDC.h; path = ../../DDC.h; sourceTree = "<group>"; };
 		E670EC1F2078C457007DAA0F /* DDC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DDC.c; path = ../../DDC.c; sourceTree = "<group>"; };
 		E670EC222078C5A1007DAA0F /* DisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
 		E670EC232078C5A1007DAA0F /* DisplayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayManager.m; sourceTree = "<group>"; };
 		E670EC262078C744007DAA0F /* HardwareDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HardwareDisplay.h; sourceTree = "<group>"; };
 		E670EC272078C744007DAA0F /* HardwareDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HardwareDisplay.m; sourceTree = "<group>"; };
+		E670EC2A207A0C97007DAA0F /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 			children = (
 				E601D7882078A4EF0061C257 /* Lumos */,
 				E601D7872078A4EF0061C257 /* Products */,
+				E670EC29207A0C96007DAA0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +73,7 @@
 			children = (
 				E601D7892078A4EF0061C257 /* AppDelegate.h */,
 				E601D78A2078A4EF0061C257 /* AppDelegate.m */,
+				E635F991207B731500E9BCB3 /* Models */,
 				E670EC252078C5AF007DAA0F /* Services */,
 				E670EC1D2078C43E007DAA0F /* DDC */,
 				E601D78F2078A4EF0061C257 /* Assets.xcassets */,
@@ -74,6 +83,17 @@
 				E601D7972078A4EF0061C257 /* Lumos.entitlements */,
 			);
 			path = Lumos;
+			sourceTree = "<group>";
+		};
+		E635F991207B731500E9BCB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E670EC262078C744007DAA0F /* HardwareDisplay.h */,
+				E670EC272078C744007DAA0F /* HardwareDisplay.m */,
+				E635F992207B732C00E9BCB3 /* GlobalShortcut.h */,
+				E635F993207B732C00E9BCB3 /* GlobalShortcut.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E670EC1D2078C43E007DAA0F /* DDC */ = {
@@ -90,10 +110,18 @@
 			children = (
 				E670EC222078C5A1007DAA0F /* DisplayManager.h */,
 				E670EC232078C5A1007DAA0F /* DisplayManager.m */,
-				E670EC262078C744007DAA0F /* HardwareDisplay.h */,
-				E670EC272078C744007DAA0F /* HardwareDisplay.m */,
+				E635F98E207B71DF00E9BCB3 /* ShortcutManager.h */,
+				E635F98F207B71DF00E9BCB3 /* ShortcutManager.m */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E670EC29207A0C96007DAA0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E670EC2A207A0C97007DAA0F /* ApplicationServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +156,11 @@
 					E601D7852078A4EF0061C257 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -170,7 +203,9 @@
 				E670EC282078C744007DAA0F /* HardwareDisplay.m in Sources */,
 				E601D7962078A4EF0061C257 /* main.m in Sources */,
 				E601D78B2078A4EF0061C257 /* AppDelegate.m in Sources */,
+				E635F994207B732C00E9BCB3 /* GlobalShortcut.m in Sources */,
 				E670EC242078C5A1007DAA0F /* DisplayManager.m in Sources */,
+				E635F990207B71DF00E9BCB3 /* ShortcutManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +330,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Lumos/Lumos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D4F5TTM4H3;
@@ -310,7 +344,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Lumos/Lumos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D4F5TTM4H3;

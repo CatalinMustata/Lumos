@@ -15,7 +15,12 @@
 @property (nonatomic, assign, readonly) BOOL isHighDPI;
 @property (nonatomic, assign, readonly) int rotation;
 
+@property (nonatomic, assign) BOOL controlEnabled;
 
 - (instancetype)initWithDisplayID:(CGDirectDisplayID)displayID size:(NSSize)size highDPI:(BOOL)highDPI rotation:(int)rotation;
+
+- (void)changeBrightnessBy:(UInt8)value;
+
+- (void)setBrightnessTo:(UInt8)value;
 
 @end

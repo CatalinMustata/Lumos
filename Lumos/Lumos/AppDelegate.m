@@ -10,6 +10,7 @@
 
 #import "DisplayManager.h"
 #import "ShortcutManager.h"
+#import "BrightnessManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
 
 @property (nonatomic, strong) DisplayManager *displayManager;
 @property (nonatomic, strong) ShortcutManager *shortcutManager;
+@property (nonatomic, strong) BrightnessManager *brightnessManager;
 
 @end
 
@@ -106,11 +108,14 @@
 }
 
 - (void)increaseBrightness {
-    NSLog(@"Increase brightness");
+    NSLog(@"Increasing brightness");
+    [self.brightnessManager increaseBrightness];
+
 }
 
 - (void)decreaseBrightness {
     NSLog(@"Decrease brightness");
+    [self.brightnessManager decreaseBrightness];
 }
 
 - (void)toggleDisplayControl:(NSMenuItem *)sender {
@@ -118,7 +123,10 @@
         return;
     }
 
-    
+    HardwareDisplay *display = (HardwareDisplay *)sender.representedObject;
+
+    display.controlEnabled = !display.controlEnabled;
+    [sender setState:(display.controlEnabled ? NSControlStateValueOn : NSControlStateValueOff)];
 }
 
 

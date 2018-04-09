@@ -13,6 +13,7 @@
 		E601D7962078A4EF0061C257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E601D7952078A4EF0061C257 /* main.m */; };
 		E635F990207B71DF00E9BCB3 /* ShortcutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E635F98F207B71DF00E9BCB3 /* ShortcutManager.m */; };
 		E635F994207B732C00E9BCB3 /* GlobalShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = E635F993207B732C00E9BCB3 /* GlobalShortcut.m */; };
+		E635F997207B9FBC00E9BCB3 /* BrightnessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E635F996207B9FBC00E9BCB3 /* BrightnessManager.m */; };
 		E670EC202078C457007DAA0F /* DDC.c in Sources */ = {isa = PBXBuildFile; fileRef = E670EC1F2078C457007DAA0F /* DDC.c */; };
 		E670EC242078C5A1007DAA0F /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E670EC232078C5A1007DAA0F /* DisplayManager.m */; };
 		E670EC282078C744007DAA0F /* HardwareDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E670EC272078C744007DAA0F /* HardwareDisplay.m */; };
@@ -31,6 +32,8 @@
 		E635F98F207B71DF00E9BCB3 /* ShortcutManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShortcutManager.m; sourceTree = "<group>"; };
 		E635F992207B732C00E9BCB3 /* GlobalShortcut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalShortcut.h; sourceTree = "<group>"; };
 		E635F993207B732C00E9BCB3 /* GlobalShortcut.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlobalShortcut.m; sourceTree = "<group>"; };
+		E635F995207B9FBC00E9BCB3 /* BrightnessManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrightnessManager.h; sourceTree = "<group>"; };
+		E635F996207B9FBC00E9BCB3 /* BrightnessManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrightnessManager.m; sourceTree = "<group>"; };
 		E670EC1E2078C44F007DAA0F /* DDC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DDC.h; path = ../../DDC.h; sourceTree = "<group>"; };
 		E670EC1F2078C457007DAA0F /* DDC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = DDC.c; path = ../../DDC.c; sourceTree = "<group>"; };
 		E670EC222078C5A1007DAA0F /* DisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 			children = (
 				E670EC222078C5A1007DAA0F /* DisplayManager.h */,
 				E670EC232078C5A1007DAA0F /* DisplayManager.m */,
+				E635F995207B9FBC00E9BCB3 /* BrightnessManager.h */,
+				E635F996207B9FBC00E9BCB3 /* BrightnessManager.m */,
 				E635F98E207B71DF00E9BCB3 /* ShortcutManager.h */,
 				E635F98F207B71DF00E9BCB3 /* ShortcutManager.m */,
 			);
@@ -201,6 +206,7 @@
 			files = (
 				E670EC202078C457007DAA0F /* DDC.c in Sources */,
 				E670EC282078C744007DAA0F /* HardwareDisplay.m in Sources */,
+				E635F997207B9FBC00E9BCB3 /* BrightnessManager.m in Sources */,
 				E601D7962078A4EF0061C257 /* main.m in Sources */,
 				E601D78B2078A4EF0061C257 /* AppDelegate.m in Sources */,
 				E635F994207B732C00E9BCB3 /* GlobalShortcut.m in Sources */,

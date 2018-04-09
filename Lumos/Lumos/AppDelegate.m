@@ -56,6 +56,9 @@
 
     [self buildMenu];
 
+    self.brightnessManager = [[BrightnessManager alloc] init];
+    self.displayManager.delegate = self.brightnessManager;
+
     self.appStatusItem.menu = self.barMenu;
 }
 
@@ -104,7 +107,15 @@
 }
 
 - (void)toggleAutoMode {
-    [self.barMenu.itemArray.firstObject setState:NSControlStateValueOn];
+    if (self.displayManager.isAutoModeOn) {
+        [self.displayManager stopAutoTrackingMode];
+        [self.barMenu.itemArray.firstObject setTitle:@"Enable Auto Mode"];
+    } else {
+        if ([self.displayManager startAutoTrackingMode]) {
+            [self.barMenu.itemArray.firstObject setTitle:@"Disable Auto Mode"];
+        }
+    }
+
 }
 
 - (void)increaseBrightness {

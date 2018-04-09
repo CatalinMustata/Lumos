@@ -52,4 +52,11 @@
     }
 }
 
+#pragma mark DisplayManagerDelegate
+
+- (void)displayManager:(DisplayManager *)manager didTrackBrightnessChangeTo:(UInt8)newValue {
+    NSLog(@"Setting external display brightness to %u", newValue);
+    [self setBrightnessTo:newValue];
+}
+
 @end

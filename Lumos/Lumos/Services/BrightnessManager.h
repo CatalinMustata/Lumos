@@ -10,7 +10,7 @@
 
 #import "DisplayManager.h"
 
-@interface BrightnessManager : NSObject
+@interface BrightnessManager : NSObject<DisplayManagerDelegate>
 
 - (void)setDisplayManager:(DisplayManager *)displayManager;
 

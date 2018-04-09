@@ -78,11 +78,11 @@
 
     [self.barMenu addItem:NSMenuItem.separatorItem];
     NSMenuItem *increaseBrightnessItem = [[NSMenuItem alloc] initWithTitle:@"Increase Brightness" action:@selector(increaseBrightness) keyEquivalent:@"="];
-    increaseBrightnessItem.keyEquivalentModifierMask = NSEventModifierFlagCommand | NSEventModifierFlagControl;
+    increaseBrightnessItem.keyEquivalentModifierMask = NSEventModifierFlagShift | NSEventModifierFlagControl;
     [self.barMenu addItem:increaseBrightnessItem];
 
     NSMenuItem *decreaseBrightnessItem = [[NSMenuItem alloc] initWithTitle:@"Decrease Brightness" action:@selector(decreaseBrightness) keyEquivalent:@"-"];
-    decreaseBrightnessItem.keyEquivalentModifierMask = NSEventModifierFlagCommand | NSEventModifierFlagControl;
+    decreaseBrightnessItem.keyEquivalentModifierMask = NSEventModifierFlagShift | NSEventModifierFlagControl;
     [self.barMenu addItem:decreaseBrightnessItem];
 
     [self.barMenu addItem:NSMenuItem.separatorItem];

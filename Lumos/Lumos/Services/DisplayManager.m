@@ -32,7 +32,6 @@
         [self getExternalDisplays];
 
         _autoModeOn = NO;
-        [self initAutoTrackingThread];
     }
 
     return self;
@@ -77,6 +76,7 @@
     }
 
     self.autoModeOn = YES;
+    [self initAutoTrackingThread];
     [self.trackingThread start];
 
     return YES;
@@ -84,6 +84,7 @@
 
 - (void)stopAutoTrackingMode {
     self.autoModeOn = NO;
+    self.trackingThread = nil;
 }
 
 - (BOOL)isAutoModeOn {

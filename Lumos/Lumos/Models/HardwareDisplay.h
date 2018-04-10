@@ -16,6 +16,7 @@
 @property (nonatomic, assign, readonly) int rotation;
 
 @property (nonatomic, assign) BOOL controlEnabled;
+@property (nonatomic, assign) BOOL isAutoManaged;
 
 - (instancetype)initWithDisplayID:(CGDirectDisplayID)displayID size:(NSSize)size highDPI:(BOOL)highDPI rotation:(int)rotation;
 

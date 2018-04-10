@@ -76,6 +76,10 @@
     }
 
     self.autoModeOn = YES;
+    for (HardwareDisplay *display in self.displays) {
+        display.isAutoManaged = YES;
+    }
+
     [self initAutoTrackingThread];
     [self.trackingThread start];
 
@@ -84,6 +88,10 @@
 
 - (void)stopAutoTrackingMode {
     self.autoModeOn = NO;
+    for (HardwareDisplay *display in self.displays) {
+        display.isAutoManaged = NO;
+    }
+
     self.trackingThread = nil;
 }
 

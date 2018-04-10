@@ -16,6 +16,7 @@
 @property (nonatomic, assign) NSString *EDIDserial;
 
 @property (nonatomic, assign) UInt8 maxBrightness;
+@property (nonatomic, assign) UInt8 currentBrightness;
 
 @end
 
@@ -43,10 +44,13 @@
         NSLog(@"Failed to read current brightness");
     }
 
+    self.currentBrightness = readCommand.current_value;
     [self setBrightnessTo:readCommand.current_value + value];
 }
 
 - (void)setBrightnessTo:(int)targetValue {
+    if (self.isAutoManaged && self.currentBrightness == targetValue) return;
+
     struct DDCWriteCommand writeCommand;
     writeCommand.control_id = BRIGHTNESS;
 
@@ -59,6 +63,8 @@
     if (!DDCWrite(self.displayID, &writeCommand)){
         NSLog(@"E: Failed to send DDC command!");
     }
+
+    self.currentBrightness = targetValue;
 }
 
 #pragma mark - Private
@@ -93,6 +99,7 @@ NSString *EDIDString(char *string)
             NSLog(@"Failed to read current brightness");
         }
 
+        self.currentBrightness = readCommand.current_value;
         self.maxBrightness = readCommand.max_value;
     }
 }

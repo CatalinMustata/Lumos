@@ -57,6 +57,7 @@
     [self buildMenu];
 
     self.brightnessManager = [[BrightnessManager alloc] init];
+    [self.brightnessManager setDisplayManager:self.displayManager];
     self.displayManager.delegate = self.brightnessManager;
 
     self.appStatusItem.menu = self.barMenu;

@@ -34,7 +34,7 @@
     return self;
 }
 
-- (void)changeBrightnessBy:(UInt8)value {
+- (void)changeBrightnessBy:(int)value {
     struct DDCReadCommand readCommand = { 0 };
     readCommand.control_id = BRIGHTNESS;
     NSLog(@"D: querying VCP control: #%u =?", readCommand.control_id);
@@ -46,11 +46,12 @@
     [self setBrightnessTo:readCommand.current_value + value];
 }
 
-- (void)setBrightnessTo:(UInt8)targetValue {
+- (void)setBrightnessTo:(int)targetValue {
     struct DDCWriteCommand writeCommand;
     writeCommand.control_id = BRIGHTNESS;
 
     if (targetValue > self.maxBrightness) targetValue = self.maxBrightness;
+    if (targetValue < 0) targetValue = 0;
 
     writeCommand.new_value = targetValue;
 

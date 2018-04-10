@@ -19,8 +19,8 @@
 
 - (instancetype)initWithDisplayID:(CGDirectDisplayID)displayID size:(NSSize)size highDPI:(BOOL)highDPI rotation:(int)rotation;
 
-- (void)changeBrightnessBy:(UInt8)value;
+- (void)changeBrightnessBy:(int)value;
 
-- (void)setBrightnessTo:(UInt8)value;
+- (void)setBrightnessTo:(int)value;
 
 @end
